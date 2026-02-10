@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Blogs</title>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script src="script.js"></script>
+        <script src="blogscript.js"></script>
+        <link rel="stylesheet" type="text/css" a href="sheet.css" id="css">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png"/>
+    </head>
+    <body>
+        <div class="nav">
+            <a href="main.html">Main Page</a>
+            <a class="active" href="blog.html">Blog</a>
+            <a href="projects.html">Projects</a>
+            <a href="team.html">Team</a>
+            <div class="dropdown">
+                <span>Contact</span>
+                <div class="dropdown-content" id="dropdown-content">
+                    <a href="mailto:lengbowen4@gmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/bowen-leng-0a2966321/">LinkedIn</a>
+                    <a href="https://www.instagram.com/leng.bowen/">Instagram</a>
+                </div>
+            </div>
+            <a href="https://github.com/bowenleng">Github</a>
+        </div>
+        <section class="white-section">
+            <div class="text-section">
+                <h3>Write a Post</h3>
+                <p>Note: Only authorized email accounts are allowed to write posts on this website</p>
+                <p>
+                    If you have a problem/question with a project, please go to the issues section of their respective github pages.
+                    And if you have a general question about me or my team, feel free to contact me <a href="mailto:lengbowen4@gmail.com">here</a>
+                </p>
+                <form>
+                    <label for="title">Post Title:</label>
+                    <br>
+                    <input type="text" id="title" name="title">
+                    <br>
+                    <label for="subject">Post Subject:</label>
+                    <br>
+                    <input type="text" id="subject" name="subject">
+                    <br>
+                    <label for="author">Post Author's Email Address:</label>
+                    <br>
+                    <input type="email" id="author" name="author">
+                    <br>
+                    <label for="pics">Upload Media:</label>
+                    <br>
+                    <input type="file" id="pics" name="pics">
+                    <br>
+                    <label for="post">Post:</label>
+                    <br>
+                    <input type="text" id="post" name="post">
+                    <br>
+                </form>
+                <h1>Blogs</h1>
+            </div>
+        </section>
+        <footer>
+            <p>© Bowen Leng 2025</p>
+        </footer>
+    </body>
+</html>

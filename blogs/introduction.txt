@@ -1,0 +1,3 @@
+   Hello to everyone reading this webpage. This website will serve as an introduction to me, who I am, and what drove me to pursue programming as a path.
+
+   Ever since I was a kid, I have always been fascinated with game design and game modification which led me to dream of creating a mod for Minecraft in middle school. This was the original driving force for learning how to code for me and what led me to take my first computer science course in high school. From the point onwards, I learned about the endless possibilities that I can achieve with just some weirdly formatted text on a computer screen and as such started working on new projects. 
