@@ -35,6 +35,9 @@ header {
     text-align: center;
     min-height: 75vh;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 section {
     margin: 0;
