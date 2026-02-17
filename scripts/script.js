@@ -29,3 +29,12 @@ jQuery(document).ready(function() {
         }
     });
 })
+
+i = 0
+var image = new Image();
+
+srcs = ["1.png", "2.jpg", "3.gif"];
+image.onload = function () {
+    jQuery("body").css("background-image", "url('bg" + srcs[i++] + "')")
+}
+image.src = srcs[i++]

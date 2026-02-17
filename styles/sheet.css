@@ -12,7 +12,7 @@ a:visited {
     color: #4a4e52;
 }
 body {
-    background-image: url("../assets/background.png");
+    background-image: url("../assets/bg3.gif");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -33,7 +33,7 @@ header {
     align-content: center;
     align-items: center;
     text-align: center;
-    min-height: 75vh;
+    min-height: 50vh;
 }
 html {
     scroll-behavior: smooth;
