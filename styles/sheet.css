@@ -13,40 +13,38 @@ a:visited {
 }
 body {
     background-image: url("../assets/bg3.gif");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-position: center top;
+    background-size: 100% auto;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     min-width: 100%;
-    min-height: 100%;
     font-size: 18px;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 footer {
     padding-bottom: 30px;
     background-color: #171a1c;
     color: #e3effa;
+    flex-shrink: 0;
 }
 header {
     background-position: center;
-    align-content: center;
+    background-size: cover;
     align-items: center;
     text-align: center;
-    min-height: 50vh;
+    aspect-ratio: 21/9;
+    max-height: 50vh;
 }
 html {
     scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
-
-section {
-    margin: 0;
-    display: block;
-    background-position: center;
-    align-content: center;
-    align-items: center;
-}
-
 h1 {
     text-align: center;
     font-size: 30px;
@@ -56,29 +54,42 @@ h1 {
 h2, h3, h4, h5 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+section {
+    margin: 0;
+    display: block;
+    flex: 1 0 auto;
+    background-position: center;
+    align-content: center;
+    align-items: center;
+}
 table {
     align-self: center;
     margin: 0 auto;
-    min-width: 300px;
 }
 td {
-    text-align: left;
+    text-align: center;
     color: #4a4e52;
     font-family: Arial, Helvetica, sans-serif;
     width: 33%;
 }
 th {
-    text-align: left;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     color: #889199;
     font-size: larger;
     width: 33%;
 }
-p {
-    font-family: Arial, Helvetica, sans-serif;
+ul {
+    text-align: left;
 }
 
+#ind-head {
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+}
 .active {
     background-color: #ccc;
 }
@@ -103,7 +114,6 @@ p {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 .nav {
     display: block;
     width: 100%;
@@ -161,7 +171,7 @@ p {
 }
 
 .text-section {
-    max-width: 1080px;
+    max-width: 932px;
     text-align: center;
     align-self: center;
     margin: 0 auto;

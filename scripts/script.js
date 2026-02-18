@@ -31,10 +31,27 @@ jQuery(document).ready(function() {
 })
 
 i = 0
-var image = new Image();
+jQuery(document).ready(function () {
+    const images = [
+        "assets/bg1.gif",
+        "assets/bg2.jpg",
+        "assets/bg3.png"
+    ];
 
-srcs = ["1.png", "2.jpg", "3.gif"];
-image.onload = function () {
-    jQuery("body").css("background-image", "url('bg" + srcs[i++] + "')")
-}
-image.src = srcs[i++]
+    let index = 0;
+    function changeBackground() {
+        jQuery("#ind-head").css(
+            "background-image",
+            "url(" + images[index] + ")"
+        );
+
+        index = (index + 1) % images.length;
+        if (images[index].substring(images.length - 3) == "gif") {
+            time = 20000;
+        }
+    }
+
+    /* Initial image */
+    changeBackground();
+    setInterval(changeBackground, num);
+});
