@@ -45,13 +45,28 @@ jQuery(document).ready(function () {
             "url(" + images[index] + ")"
         );
 
-        index = (index + 1) % images.length;
-        if (images[index].substring(images.length - 3) == "gif") {
-            time = 20000;
+        let change = false;
+        const date = new Date();
+        const m = date.getMonth();
+        const d = date.getDate();
+        let event_img = "assets/team-bg.png";
+        if (m == 3 && d == 1) {
+            event_img = "assets/april-fools-bg.gif";
+            change = true;
         }
+
+        if (change) {
+            jQuery("#team-body").css(
+                "background-image",
+                "url(" + event_img + ")"
+            )
+        }
+
+        index = (index + 1) % images.length;
+        return images[index].substring(images.length - 3) == "gif" ? 20000 : 5000;
     }
 
     /* Initial image */
-    changeBackground();
-    setInterval(changeBackground, num);
+    time = changeBackground();
+    setInterval(changeBackground, time);
 });
