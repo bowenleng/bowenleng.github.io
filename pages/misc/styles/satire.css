@@ -36,3 +36,13 @@ section {
 p {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.footer-image {
+    width: 32px;
+    float: left;
+    padding: 5px;
+}
+.footer-section {
+    display: block;
+    align-items: center;
+}
