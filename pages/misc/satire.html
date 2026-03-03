@@ -3,11 +3,27 @@
     <head>
         <meta charset="utf8">
         <title>Je ne sais pas c'est de quoi</title>
+        <script src="../../scripts/jquery-3.7.1.min.js"></script>
         <link rel="stylesheet" type="text/css" a href="styles/satire.css" id="css">
     </head>
     <body>
+        <script>
+            let a = 0
+            function change() {
+                if (a == 0) {
+                    jQuery("h1").text("Ecoute, je ne suis pas un twink");
+                    jQuery("title").text("No se que es de que")
+                    a = 1;
+                } else {
+                    jQuery("h1").text("Escucha, no soy un twink");
+                    jQuery("title").text("Je ne sais pas c'est de quoi")
+                    a = 0;
+                }
+            }
+        </script>
         <section>
-            <h1>Escucha, no soy un twink</h1>
+            <h1 id="title">Escucha, no soy un twink</h1>
+            <button onclick="change()">Hi look I'm a magical button</button>
         </section>
         <footer>
             <p>Return to the main site <a href="../../index.html">here</a></p>
