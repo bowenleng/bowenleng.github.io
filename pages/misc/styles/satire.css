@@ -20,6 +20,16 @@ body {
     margin: 0;
     padding: 0;
 }
+header {
+    background-image: url("../../../assets/april-fools-bg.gif");
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+    aspect-ratio: 21/9;
+    max-height: 50vh;
+}
+
 footer {
     padding-bottom: 30px;
     background-color: #171a1c;
@@ -31,6 +41,7 @@ section {
     display: block;
     background-position: center;
     flex: 1 0 auto;
+    text-align: center;
 }
 
 p {
