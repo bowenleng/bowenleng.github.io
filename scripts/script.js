@@ -92,3 +92,11 @@ jQuery(document).ready(function () {
     time = changeBackground();
     setInterval(changeBackground, time);
 });
+
+jQuery(window).on("load", function() {
+    setTimeout(function() {
+        jQuery("#preloader").animate({left: "-120vw"}, 1000, "swing", function() {
+            jQuery("#content").fadeIn(400);
+        })
+    }, 750);
+});
