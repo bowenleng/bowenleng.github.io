@@ -201,6 +201,7 @@ ul {
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 9999;
     color: #ffffff;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

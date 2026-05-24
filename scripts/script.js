@@ -100,3 +100,10 @@ jQuery(window).on("load", function() {
         })
     }, 750);
 });
+
+jQuery(document).on("click", "a[href^=\"#projects\"", function (event) {
+    event.preventDefault();
+    jQuery("html, body").animate({
+        scrollTop: jQuery("#Projects").offset().top
+    }, 500)
+});
