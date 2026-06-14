@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf8">
+        <title>Hydrogen</title>
+        <script src="../../scripts/jquery-3.7.1.min.js"></script>
+        <script src="materials.js"></script>
+        <link rel="stylesheet" type="text/css" a href="materials.css" id="css">
+        <link rel="icon" type="image/x-icon" href="../../assets/tekora.png"/>
+    </head>
+    <body>
+        <a href="../tekora.html">Back</a>
+        <main id="periodic-table"></main>
+        <script src="materials.js"></script>
+        <div>
+            <div id="shortened">
+                <h1>Hydrogen</h1>
+                <p id="content"></p>
+            </div>
+        </div>
+    <script>
+        // Fetch the external Markdown file
+        fetch('https://github.com/bowenleng/Tekora-docs/blob/main/materials/HYDROGEN.md')
+            .then(response => response.text())
+            .then(markdownText => {
+                // Convert Markdown text to HTML and insert it into the DOM
+                document.getElementById('content').innerHTML = marked.parse(markdownText);
+            })
+            .catch(error => {
+                document.getElementById('content').innerHTML =
+                'This page currently does not exist. You may create the contents for this page at <a href="https://github.com/bowenleng/Tekora-docs/blob/main/materials">this link</a> with the name HYDROGEN.md';
+                console.error(error);
+            });
+    </script>
+    </body>
+</html>

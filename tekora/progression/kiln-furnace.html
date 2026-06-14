@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf8">
+        <title>Kiln Furnace</title>
+        <script src="../../scripts/jquery-3.7.1.min.js"></script>
+        <script src="../scripts/script.js"></script>
+        <link rel="stylesheet" type="text/css" a href="../sheets.css" id="css">
+        <link rel="icon" type="image/x-icon" href="../../assets/tekora.png"/>
+    </head>
+    <body>
+        <a href="../progression.html">Back</a>
+        <div>
+            <div class="shortened">
+                <h1>Kiln Furnace</h1>
+                <p id="content"></p>
+            </div>
+            <footer>
+                <p>© Bowen Leng 2026</p>
+                <figure class="footer-section">
+                    <a href="https://github.com/bowenleng/Tekora">
+                        <img src="../../assets/github-logo.png" alt="Github" class="footer-image">
+                    </a>
+                    <a href="https://www.youtube.com/@Osdymtub">
+                        <img src="../../assets/youtube-logo.png" alt="Youtube" class="footer-image">
+                    </a>
+                </figure>
+            </footer>
+        </div>
+    <script>
+        // Fetch the external Markdown file
+        fetch('https://github.com/bowenleng/Tekora-docs/blob/main/progression/KILN_FURNACE.md')
+            .then(response => response.text())
+            .then(markdownText => {
+                // Convert Markdown text to HTML and insert it into the DOM
+                document.getElementById('content').innerHTML = marked.parse(markdownText);
+            })
+            .catch(error => {
+                document.getElementById('content').innerHTML = 'Error loading file.';
+                console.error(error);
+            });
+    </script>
+    </body>
+</html>

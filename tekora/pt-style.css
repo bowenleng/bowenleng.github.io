@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'Minecraftia';
+  src: url('fonts/Minecraftia.woff2') format('woff2'),
+       url('fonts/Minecraftia.woff') format('woff'),
+       url('fonts/Minecraftia.ttf') format('truetype');
+}
+
+a {
+    color: #f7fbff;
+}
+a:visited {
+    color: #cad5e0;
+}
+
+body {
+    font-family: 'Minecraftia', Courier, monospace;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+
+.footer-section {
+    display: block;
+    align-items: center;
+}
+.footer-image {
+    width: 32px;
+    float: left;
+    padding: 5px;
+}
+
+/* 18 Column Layout mirroring chemical groups */
+#periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, minmax(50px, 1fr));
+    gap: 4px;
+    max-width: 1296px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+/* Element Styling */
+.element-card {
+    background-color: #333;
+    border: 1px solid #555;
+    padding: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.element-card:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.atomic-number {
+    font-size: 0.7rem;
+}
+
+.symbol {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+}
+
+.name {
+    font-size: 0.5rem;
+    color: #ffffff;
+}
+
+/* Color Coding Categories */
+.noble-gas { background-color: #9318b8; }
+.reactive-nonmetal { background-color: #27ae60; }
+.alkali-metal { background-color: #0a3fd0; }
+.alkaline-earth-metal { background-color: #2980b9; }
+.transition-metal { background-color: #565656; }
+.semimetal { background-color: #9a6262; }
+.weak-metal { background-color: #b3a797; }
+.lanthanide { background-color: #edaed1; }
+.actinide { background-color: #d35400; }
+.halogen { background-color: #dc7610; }
+.unknown { background-color: #95a5a6; }
+
+.shortened {
+    max-width: 1080px;
+    text-align: center;
+    align-self: center;
+    margin: 0 auto;
+    display: block;
+}
