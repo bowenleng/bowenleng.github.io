@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf8">
+        <title>Gold</title>
+        <script src="../../scripts/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" a href="materials.css" id="css">
+        <link rel="icon" type="image/x-icon" href="../../assets/tekora/chemistry.png"/>
+    </head>
+    <body>
+        <div class="sidenav" id="sidebar">
+            <ul>
+                <li><button id="closebtn">Close</button></li>
+                <li><a href="../tekora.html">Main Page</a></li>
+                <li><a href="../docs.html">Addon Docs</a></li>
+                <li><a href="../materials.html">Materials</a></li>
+                <li><a href="../progression.html">Progression</a></li>
+            </ul>
+        </div>
+        <button id="openbtn">Menu</button>
+        <div id="shortened">
+            <table>
+                <tr>
+                    <td colspan="2" rowspan="2">
+                        <main id="periodic-table"></main>
+                    </td>
+                    <td><a href="silver.html">Ag</a></td>
+                </tr>
+                <tr>
+                    <td><a href="misc-elements.html">Rg</a></td>
+                </tr>
+                <tr>
+                    <td><a href="platinum.html">Platinum</a></td>
+                    <td><a href="mercury.html">Mercury</a></td>
+                </tr>
+            </table>
+            <script src="materials.js"></script>
+            <h1>Gold</h1>
+            <p id="content"></p>
+        </div>
+    <script>
+        fetch('https://github.com/bowenleng/Tekora-docs/blob/main/en/materials/GOLD.md')
+            .then(response => response.text())
+            .then(markdownText => {
+                document.getElementById('content').innerHTML = marked.parse(markdownText);
+            })
+            .catch(error => {
+                document.getElementById('content').innerHTML =
+                'This page currently does not exist. You may create the contents for this page at <a href="https://github.com/bowenleng/Tekora-docs/blob/main/materials">this link</a> with the name GOLD.md';
+                console.error(error);
+            });
+    </script>
+    </body>
+</html>

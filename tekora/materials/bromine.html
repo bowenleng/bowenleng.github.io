@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf8">
-        <title>Copper</title>
+        <title>Bromine</title>
         <script src="../../scripts/jquery-3.7.1.min.js"></script>
         <link rel="stylesheet" type="text/css" a href="materials.css" id="css">
         <link rel="icon" type="image/x-icon" href="../../assets/tekora/chemistry.png"/>
@@ -25,29 +25,29 @@
                     <td colspan="2" rowspan="2">
                         <main id="periodic-table"></main>
                     </td>
-                    <td><a>-<a></td>
+                    <td><a href="chlorine.html">Cl</a></td>
                 </tr>
                 <tr>
-                    <td><a href="silver.html">Ag</a></td>
+                    <td><a href="iodine.html">I</a></td>
                 </tr>
                 <tr>
-                    <td><a href="nickel.html">Nickel</a></td>
-                    <td><a href="zinc.html">Zinc</a></td>
+                    <td><a href="selenium.html">Selenium</a></td>
+                    <td><a href="krypton.html">Krypton</a></td>
                 </tr>
             </table>
             <script src="materials.js"></script>
-            <h1>Copper</h1>
+            <h1>Bromine</h1>
             <p id="content"></p>
         </div>
     <script>
-        fetch('https://github.com/bowenleng/Tekora-docs/blob/main/en/materials/COPPER.md')
+        fetch('https://github.com/bowenleng/Tekora-docs/blob/main/en/materials/BROMINE.md')
             .then(response => response.text())
             .then(markdownText => {
                 document.getElementById('content').innerHTML = marked.parse(markdownText);
             })
             .catch(error => {
                 document.getElementById('content').innerHTML =
-                'This page currently does not exist. You may create the contents for this page at <a href="https://github.com/bowenleng/Tekora-docs/blob/main/materials">this link</a> with the name COPPER.md';
+                'This page currently does not exist. You may create the contents for this page at <a href="https://github.com/bowenleng/Tekora-docs/blob/main/materials">this link</a> with the name BROMINE.md';
                 console.error(error);
             });
     </script>

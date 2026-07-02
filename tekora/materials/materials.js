@@ -122,6 +122,7 @@ const elements = [
 const table = document.getElementById('periodic-table');
 
 // Dynamic DOM Node generation 
+var num = 0;
 elements.forEach(el => {
     const card = document.createElement('div');
     card.classList.add('element-card', el.category);
@@ -129,11 +130,32 @@ elements.forEach(el => {
     // Explicit placement via CSS Grid line markers
     card.style.gridRowStart = el.row;
     card.style.gridColumnStart = el.column;
-
-    var name = el.name.toLowerCase();
-    var link = "materials/" + name + ".html";
+    num++;
+    var link;
+    if (num === 43 || num === 61 || (85 <= num && num <= 87) || num > 96) {
+        link = "misc-elements.html";
+    } else {
+        var name = el.name.toLowerCase();
+        link = name + ".html";
+    }
 
     // Interactivity: Event listener configuration
     card.addEventListener('click', () => open(link));
     table.appendChild(card);
+});
+
+jQuery(document).ready(function() {
+    jQuery("#openbtn").click(function() {
+        jQuery("#sidebar").animate({
+            left: "0vw"
+        }, 500)
+    });
+});
+
+jQuery(document).ready(function() {
+    jQuery("#closebtn").click(function() {
+        jQuery("#sidebar").animate({
+            left: "-22vw"
+        }, 500)
+    });
 });

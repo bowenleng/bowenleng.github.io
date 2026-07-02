@@ -48,7 +48,7 @@ h1, h2, h3 {
 .element-card {
     background-color: #333;
     border: 1px solid #555;
-    padding: 6px;
+    padding: 1px;
     text-align: center;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.2s;
@@ -60,17 +60,17 @@ h1, h2, h3 {
 }
 
 .atomic-number {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
 }
 
 .symbol {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: bold;
     display: block;
 }
 
 .name {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
     color: #ffffff;
 }
 

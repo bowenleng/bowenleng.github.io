@@ -4,26 +4,44 @@
         <meta charset="utf8">
         <title>Hydrogen</title>
         <script src="../../scripts/jquery-3.7.1.min.js"></script>
-        <script src="materials.js"></script>
         <link rel="stylesheet" type="text/css" a href="materials.css" id="css">
-        <link rel="icon" type="image/x-icon" href="../../assets/tekora.png"/>
+        <link rel="icon" type="image/x-icon" href="../../assets/tekora/chemistry.png"/>
     </head>
     <body>
-        <a href="../tekora.html">Back</a>
-        <main id="periodic-table"></main>
-        <script src="materials.js"></script>
-        <div>
-            <div id="shortened">
-                <h1>Hydrogen</h1>
-                <p id="content"></p>
-            </div>
+        <div class="sidenav" id="sidebar">
+            <ul>
+                <li><button id="closebtn">Close</button></li>
+                <li><a href="../tekora.html">Main Page</a></li>
+                <li><a href="../docs.html">Addon Docs</a></li>
+                <li><a href="../materials.html">Materials</a></li>
+                <li><a href="../progression.html">Progression</a></li>
+            </ul>
+        </div>
+        <button id="openbtn">Menu</button>
+        <div id="shortened">
+            <table>
+                <tr>
+                    <td colspan="2" rowspan="2">
+                        <main id="periodic-table"></main>
+                    </td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td><a href="lithium.html">Li</a></td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td><a href="helium.html">Helium</a></td>
+                </tr>
+            </table>
+            <script src="materials.js"></script>
+            <h1>Hydrogen</h1>
+            <p id="content"></p>
         </div>
     <script>
-        // Fetch the external Markdown file
-        fetch('https://github.com/bowenleng/Tekora-docs/blob/main/materials/HYDROGEN.md')
+        fetch('https://github.com/bowenleng/Tekora-docs/blob/main/en/materials/HYDROGEN.md')
             .then(response => response.text())
             .then(markdownText => {
-                // Convert Markdown text to HTML and insert it into the DOM
                 document.getElementById('content').innerHTML = marked.parse(markdownText);
             })
             .catch(error => {

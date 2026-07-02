@@ -137,8 +137,14 @@ elements.forEach(el => {
         <span class="name">${el.name}</span>
     `;
 
-    var name = el.name.toLowerCase();
-    var link = "materials/" + name + ".html";
+    var num = el.number;
+    var link;
+    if (num === 43 || num === 61 || (85 <= num && num <= 87) || num > 96) {
+        link = "materials/misc-elements.html";
+    } else {
+        var name = el.name.toLowerCase();
+        link = "materials/" + name + ".html";
+    }
 
     // Interactivity: Event listener configuration
     card.addEventListener('click', () => open(link));
